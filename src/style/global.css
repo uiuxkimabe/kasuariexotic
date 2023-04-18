@@ -1,0 +1,199 @@
+/*? global clearing */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Unbounded:wght@200;300;400;500;600;700&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--poppins);
+}
+
+:root {
+  /* font family */
+  --poppins: "Poppins", sans-serif;
+  --unbounded: "Unbounded", cursive;
+
+  /* color pallete */
+  --basic: #fff;
+  --dark: #242424;
+  --primary: #141751;
+  --secondary: #9c8454;
+  --text: #8e8fa2;
+  --kaaki: #c1a874;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.link-dark a {
+  /* dark color bg light */
+  color: var(--dark);
+}
+
+.link-light a {
+  /* dark color bg light */
+  color: var(--basic);
+}
+
+.cta-primary,
+input {
+  padding: 8px 20px;
+  border: none;
+  background-color: var(--kaaki);
+  color: var(--dark);
+  font-weight: 500;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+/* nav */
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  padding: 1.5em 0;
+  transition: 0.3s ease-in-out;
+}
+
+nav.scroll {
+  padding: 1em 0;
+  background-color: var(--basic);
+  box-shadow: 0 3px 20px rgba(36, 36, 36, 0.253);
+}
+
+nav .btnMenu {
+  justify-content: center;
+  gap: 1em;
+}
+
+.btnMenu .socmed {
+  justify-content: center;
+  gap: 1em;
+}
+
+nav .menuNavbar {
+  min-width: 350px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--basic);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  box-shadow: 3px 0 20px rgba(36, 36, 36, 0.253);
+}
+
+nav .menuNavbar.openMenu {
+  transform: translateX(0);
+}
+
+.menuNavbar a {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.menuNavbar a:hover {
+  background-color: #cccccc;
+}
+
+.menuNavbar #closeMenu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* end nav */
+
+/* jumbotron */
+#jumbotron {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  color: var(--basic);
+  text-align: center;
+}
+
+#jumbotron h1 {
+  font-family: var(--unbounded);
+  font-size: 2rem;
+}
+
+#jumbotron .container {
+  justify-content: center;
+}
+
+#jumbotron video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#jumbotron .highlight {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(36, 36, 36, 0.678);
+}
+
+#jumbotron form {
+  background-color: var(--basic);
+  padding: 1em 2em;
+  margin: 1em 0;
+  border-radius: 50px;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+#jumbotron form input,
+button {
+  flex: 1 1 150px;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #242424;
+}
+
+#jumbotron form input:focus {
+  border: none;
+}
+
+/* end jumbotron */
+
+/* hightlight rooms */
+
+#highlight-rooms {
+  height: 100vh;
+}
+
+/* end highlight rooms */
